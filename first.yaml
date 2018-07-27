@@ -1,5 +1,5 @@
 --- # myfirst yaml ..
- - hosts: slave
+ - hosts: node1.blr.com
    remote_user: ansible
    become: yes
    become_method: sudo
@@ -10,16 +10,7 @@
    tasks:
     - name: Installing webservice on
       yum:
-         name: httpd
-         state: latest
+         name: vim
+         state: absent
 #    - name: Starting webservice on
 #      service:
-#         name: httpd
-#         state: started
-      notify:
-       - startservice
-   handlers:
-    - name: making service start
-      service:
-         name: httpd
-         state: started
