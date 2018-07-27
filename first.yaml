@@ -1,6 +1,5 @@
 --- # myfirst yaml ..
- - hosts: node1.blr.com
-   remote_user: ansible
+ - remote_user: ansible
    become: yes
    become_method: sudo
    connection: ssh
